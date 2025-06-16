@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Budce</string>
+    <string name="transactions_title">Transactions</string>
+    <string name="add_new_transaction">Add new transaction</string>
+    <string name="no_transactions_yet">No transactions yet.</string>
+    <string name="amount_label">Amount: %s</string>
+</resources>
