@@ -8,5 +8,8 @@ data class Category(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val name: String,
+    val type: CategoryType,         // ⇐ yeni alan
     val budgetAmount: Double? = null // BÜTÇE TUTARI EKLENDİ (opsiyonel)
+
 )
+

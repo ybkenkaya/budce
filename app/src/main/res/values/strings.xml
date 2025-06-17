@@ -5,4 +5,11 @@
     <string name="add_new_transaction">Add new transaction</string>
     <string name="no_transactions_yet">No transactions yet.</string>
     <string name="amount_label">Amount: %s</string>
-</resources>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_transactions">Transactions</string>
+    <string name="nav_budget">Budget</string>
+    <string name="nav_accounts">Accounts</string>
+    <string name="dashboard_title">Overview</string>
+    <string name="dashboard_dummy_balance">Total balance: %s</string>
+
+    </resources>

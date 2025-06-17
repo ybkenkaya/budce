@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="transactions_title">İşlemler</string>
+    <string name="add_new_transaction">Yeni işlem ekle</string>
+    <string name="no_transactions_yet">Henüz işlem yok.</string>
+    <string name="amount_label">Tutar: %s</string>
+
+    <string name="nav_dashboard">Özet</string>
+    <string name="nav_transactions">İşlemler</string>
+    <string name="nav_budget">Bütçe</string>
+    <string name="nav_accounts">Hesaplar</string>
+    <string name="dashboard_title">Genel Bakış</string>
+    <string name="dashboard_dummy_balance">Toplam bakiye: %s</string>
+
+</resources>

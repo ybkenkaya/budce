@@ -22,4 +22,9 @@ class Converters {
     fun toAccountType(value: String): AccountType {
         return AccountType.valueOf(value)
     }
+    @TypeConverter fun toCategoryType(name: String)     = CategoryType.valueOf(name)
+    @TypeConverter fun fromCategoryType(type: CategoryType) = type.name
+
+
 }
+
