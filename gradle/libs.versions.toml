@@ -1,33 +1,77 @@
+###############################################################################
+# libs.versions.toml  —  Budce 0.1.3
+# All aliases are lower_snake_case and UNIQUE.
+###############################################################################
+
 [versions]
-agp                   = "8.10.1"         # Android Gradle Plugin – stable, Hedgehog ile uyumlu
-kotlin                = "1.9.23"        # Kotlin 1.9 serisi
-composeBom            = "2024.06.00"    # Kotlin 1.9 ile uyumlu Compose BOM
-coreKtx               = "1.13.1"
-lifecycleRuntimeKtx   = "2.7.0"
-activityCompose       = "1.9.0"
-junit4                = "4.13.2"
-junitExt              = "1.1.5"
-espresso              = "3.5.1"
-foundationLayoutAndroid = "1.6.8"
+agp                       = "8.10.1"
+kotlin                    = "1.9.23"
+compose_bom               = "2024.06.00"
+core_ktx                  = "1.13.1"
+lifecycle_runtime         = "2.7.0"
+activity_compose          = "1.9.0"
+lifecycle_viewmodel       = "2.7.0"
+material3                 = "1.2.1"
+foundation_layout_android = "1.6.8"
+navigation_compose        = "2.8.0"
+room                      = "2.6.1"
+hilt                      = "2.52"
+hilt_nav_compose          = "1.0.0"
+coroutines                = "1.8.0"
+junit4                    = "4.13.2"
+junit_ext                 = "1.1.5"
+espresso                  = "3.5.1"
 
+###############################################################################
 [libraries]
-androidx-core-ktx              = { group = "androidx.core",                 name = "core-ktx",               version.ref = "coreKtx" }
-androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle",           name = "lifecycle-runtime-ktx",  version.ref = "lifecycleRuntimeKtx" }
-androidx-activity-compose      = { group = "androidx.activity",            name = "activity-compose",       version.ref = "activityCompose" }
-androidx-compose-bom           = { group = "androidx.compose",             name = "compose-bom",            version.ref = "composeBom" }
-androidx-ui                    = { group = "androidx.compose.ui",          name = "ui" }
-androidx-ui-graphics           = { group = "androidx.compose.ui",          name = "ui-graphics" }
-androidx-ui-tooling            = { group = "androidx.compose.ui",          name = "ui-tooling" }
-androidx-ui-tooling-preview    = { group = "androidx.compose.ui",          name = "ui-tooling-preview" }
-androidx-ui-test-manifest      = { group = "androidx.compose.ui",          name = "ui-test-manifest" }
-androidx-ui-test-junit4        = { group = "androidx.compose.ui",          name = "ui-test-junit4" }
-androidx-material3             = { group = "androidx.compose.material3",   name = "material3" }
 
-junit                          = { group = "junit",                        name = "junit",                  version.ref = "junit4" }
-androidx-junit                 = { group = "androidx.test.ext",            name = "junit",                  version.ref = "junitExt" }
-androidx-espresso-core         = { group = "androidx.test.espresso",       name = "espresso-core",          version.ref = "espresso" }
-androidx-foundation-layout-android = { group = "androidx.compose.foundation", name = "foundation-layout-android", version.ref = "foundationLayoutAndroid" }
+# Compose BOM (version comes from [versions])
+androidx_compose_bom            = { group = "androidx.compose",            name = "compose-bom",             version.ref = "compose_bom" }
 
+# Core / lifecycle / ViewModel
+androidx_core_ktx               = { group = "androidx.core",              name = "core-ktx",                version.ref = "core_ktx" }
+androidx_lifecycle_runtime_ktx  = { group = "androidx.lifecycle",         name = "lifecycle-runtime-ktx",   version.ref = "lifecycle_runtime" }
+androidx_lifecycle_viewmodel_compose = { group = "androidx.lifecycle",    name = "lifecycle-viewmodel-compose", version.ref = "lifecycle_viewmodel" }
+androidx_activity_compose       = { group = "androidx.activity",          name = "activity-compose",        version.ref = "activity_compose" }
+
+# Compose UI
+androidx_ui                     = { group = "androidx.compose.ui",        name = "ui" }
+androidx_ui_graphics            = { group = "androidx.compose.ui",        name = "ui-graphics" }
+androidx_ui_tooling_preview     = { group = "androidx.compose.ui",        name = "ui-tooling-preview" }
+androidx_ui_tooling             = { group = "androidx.compose.ui",        name = "ui-tooling" }
+androidx_ui_test_junit4         = { group = "androidx.compose.ui",        name = "ui-test-junit4" }
+androidx_ui_test_manifest       = { group = "androidx.compose.ui",        name = "ui-test-manifest" }
+
+# Material / Foundation
+androidx_material3              = { group = "androidx.compose.material3", name = "material3",               version.ref = "material3" }
+androidx_foundation_layout_android = { group = "androidx.compose.foundation", name = "foundation-layout-android", version.ref = "foundation_layout_android" }
+material_icons_extended         = { group = "androidx.compose.material",  name = "material-icons-extended" }
+
+# Navigation
+navigation_compose              = { group = "androidx.navigation",        name = "navigation-compose",      version.ref = "navigation_compose" }
+
+# Hilt (DI)
+hilt_android                    = { group = "com.google.dagger",          name = "hilt-android",            version.ref = "hilt" }
+hilt_compiler                   = { group = "com.google.dagger",          name = "hilt-compiler",           version.ref = "hilt" }
+hilt_navigation_compose         = { group = "androidx.hilt",              name = "hilt-navigation-compose", version.ref = "hilt_nav_compose" }
+
+# Room (DB)
+room_runtime                    = { group = "androidx.room",              name = "room-runtime",            version.ref = "room" }
+room_ktx                        = { group = "androidx.room",              name = "room-ktx",                version.ref = "room" }
+room_compiler                   = { group = "androidx.room",              name = "room-compiler",           version.ref = "room" }
+
+# Coroutines
+kotlinx_coroutines_android      = { group = "org.jetbrains.kotlinx",      name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Testing
+junit4                          = { group = "junit",                      name = "junit",                   version.ref = "junit4" }
+androidx_junit                  = { group = "androidx.test.ext",          name = "junit",                   version.ref = "junit_ext" }
+androidx_espresso_core          = { group = "androidx.test.espresso",     name = "espresso-core",           version.ref = "espresso" }
+
+###############################################################################
 [plugins]
-android-application = { id = "com.android.application",    version.ref = "agp" }
-kotlin-android      = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android_application             = { id = "com.android.application",       version.ref = "agp" }
+kotlin_android                  = { id = "org.jetbrains.kotlin.android",  version.ref = "kotlin" }
+kotlin_kapt                     = { id = "org.jetbrains.kotlin.kapt",     version.ref = "kotlin" }
+hilt                            = { id = "com.google.dagger.hilt.android",version.ref = "hilt" }
+###############################################################################
